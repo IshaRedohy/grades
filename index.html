@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Grade</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Input below to see your GPA.</h1>
+        <label><strong>Enter your marks: </strong></label>
+        <input type="text" name="gpa" id="grade">
+        <button type="submit" onclick="grades()">Submit</button>
+        <p id="display"></p>
+      </div>
+    </div>
+
+    <script>
+      function grades(){
+        var marks = document.getElementById('grade').value;
+
+        if(marks < 33){
+            document.getElementById('display').innerHTML = "You have failed. Eibar hoito rickshaw chalaba na hoito rickshaw-wala er bou hoba"
+        }
+        else if(marks >= 33 && marks < 40){
+            document.getElementById('display').innerHTML = "You passed but with a D. (Oi fail arki)"
+        }
+        else if(marks >= 40 && marks < 50){
+            document.getElementById('display').innerHTML =  "You have received a C. Pera nai Varsity te eitao paba na"
+        }
+        else if(marks >= 50 && marks < 60){
+            document.getElementById('display').innerHTML = "You have received a B. Startup dao naile vaat nai"
+        }
+        else if(marks >= 60 && marks < 70){
+            document.getElementById('display').innerHTML = "You have received an A- Not bad but not good."
+        }
+        else if(marks >= 70 && marks < 80){
+            document.getElementById('display').innerHTML = "You have received an A. Pera nai chotovai amar cousin o Bangla ar English e A paisilo ekhon amazon e chakri kore"
+        }
+        else if(marks >= 80 && marks <= 100) {
+            document.getElementById('display').innerHTML = "You have received an A+ amio paisilam ajaira jinish ekta. Varsity te mara khaba"
+        }
+        else{
+          document.getElementById('display').innerHTML = "Invalid input"
+        }
+
+      }
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  </body>
+</html>
